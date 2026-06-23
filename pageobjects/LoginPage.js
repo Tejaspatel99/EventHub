@@ -10,7 +10,7 @@ class LoginPage{
 
     async goTo()
     {
-        await this.page.goto("https://eventhub.rahulshettyacademy.com/login");
+        await this.page.goto("/login");
     }
 
    async OpenLoginPage(email,password)
