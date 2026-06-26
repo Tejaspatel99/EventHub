@@ -17,7 +17,10 @@ class LoginPage{
     {
         await this.Emailbox.fill(email);
         await this.Passfield.fill(password);
-        await this.signInbutton.click();
+        await Promise.all([
+            this.page.waitForURL('https://eventhub.rahulshettyacademy.com/'),
+            this.signInbutton.click()
+]);
     }
 }
 module.exports = {LoginPage};
